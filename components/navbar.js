@@ -48,11 +48,11 @@ const Navbar = props => {
                 p={2}
                 wrap="wrap"
                 maxW="container.md"
-                align="center"
+                TextAlign="center"
                 wrap="wrap"
                 justify="space-between"
             >
-                <Flex align="center" mr={5}>
+                <Flex TextAlign="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo />
                     </Heading>
@@ -73,7 +73,7 @@ const Navbar = props => {
                         Posts
                     </LinkItem>
                 </Stack>
-                <Box flex={1} align="right">
+                <Box flex={1} textAlign="right">
                     <ThemeToggleButton />
                     <Box ml={2}
                         display={{ base: 'inline-block', md: 'none' }}>

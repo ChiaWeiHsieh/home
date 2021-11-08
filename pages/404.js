@@ -16,7 +16,7 @@ export default function NotFound() {
             </Heading>
             <Text>找不到這個頁面</Text>
             <Divider my={6} />
-            <Box my={6} align="center">
+            <Box my={6} textAlign="center">
                 <NextLink href="/">
                     <Button colorScheme="teal">回到首頁</Button>
                 </NextLink>

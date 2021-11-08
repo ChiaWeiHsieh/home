@@ -8,7 +8,7 @@ import {
     Button
 } from '@chakra-ui/react'
 
-export default NotFound = () => {
+export default function NotFound() {
     return (
         <Container>
             <Heading as="h1">

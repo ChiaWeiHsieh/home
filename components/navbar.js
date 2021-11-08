@@ -12,10 +12,12 @@ import {
     MenuList,
     Menu, MenuButton, IconButton
 } from '@chakra-ui/react'
-import { HumburgerIcon } from '@chakra-ui/icons'
-
+import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButton from './theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
+    const active = path === href
+    const incativeColor = useColorModeValue('gray200', 'white')
     return (
         <NextLink href={href}>
             <Link
@@ -47,16 +49,56 @@ const Navbar = props => {
                 wrap="wrap"
                 maxW="container.md"
                 align="center"
+                wrap="wrap"
                 justify="space-between"
             >
                 <Flex align="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-                        <Logo/>
+                        <Logo />
                     </Heading>
                 </Flex>
 
+                <Stack
+                    direction={{ base: 'column', md: 'row' }}
+                    display={{ base: 'none', md: 'flex' }}
+                    width={{ base: 'full', md: 'auto' }}
+                    alignItems="center"
+                    flexGrow={1}
+                    mt={{ base: 4, nmd: 0 }}
+                >
+                    <LinkItem href="/works" path={path}>
+                        Works
+                    </LinkItem>
+                    <LinkItem href="/posts" path={path}>
+                        Posts
+                    </LinkItem>
+                </Stack>
+                <Box flex={1} align="right">
+                    <ThemeToggleButton />
+                    <Box ml={2}
+                        display={{ base: 'inline-block', md: 'none' }}>
+                        <Menu>
+                            <MenuButton
+                                as={IconButton}
+                                icon={<HamburgerIcon />}
+                                variant="outline"
+                                aria-label="Options" />
+                            <MenuList>
+                                <NextLink href="/about" passHref>
+                                    <MenuItem as={Link}>關於我</MenuItem>
+                                </NextLink>
+                                <NextLink href="/works" passHref>
+                                    <MenuItem as={Link}>我的工作</MenuItem>
+                                </NextLink>
+                                <NextLink href="/posts" passHref>
+                                    <MenuItem as={Link}>文章</MenuItem>
+                                </NextLink>
+                            </MenuList>
+                        </Menu>
+                    </Box>
+                </Box>
             </Container>
-        </Box>
+        </Box >
 
     )
 }

@@ -17,6 +17,13 @@ const Works = () => {
                     >
                         A-Mark-down-App
                     </WorkGridItem>
+                    <WorkGridItem
+                        id="inkdrop"
+                        title="Inkdrop"
+                        thumbnail={thumbInkdrop}
+                    >
+                        A-Mark-down-App
+                    </WorkGridItem>
                 </Section>
             </SimpleGrid>
         </Container>

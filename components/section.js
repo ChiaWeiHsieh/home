@@ -15,8 +15,9 @@ export default function Section({ children, delay = 0 }) {
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             trnasition={{ duration: 0.8, delay }}
-            md={6}>
-                {children}
-            </StyleDiv>
+            md={6}
+        >
+            {children}
+        </StyleDiv>
     )
 }

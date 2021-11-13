@@ -4,6 +4,7 @@ import { WorkGridItem } from '../components/grid-item'
 import thumbInkdrop from '../public/images/works/inkdrop_01.png'
 import { SimpleGrid } from '@chakra-ui/react'
 
+
 const Works = () => {
     return (
         <Container>
